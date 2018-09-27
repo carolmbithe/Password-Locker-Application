@@ -10,4 +10,11 @@ class User:
             password : New user password.
         """
         self.user_name=user_name
-        self.password=password    
+        self.password=password
+    user_names = []
+
+    def save_user(self):
+        """
+        save_user method saves user objects into the user_names
+        """
+        User.user_names.append(self)
