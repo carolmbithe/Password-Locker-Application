@@ -5,10 +5,13 @@ class Credential:
     def __init__(self,account_type,user_name,password):
         """
         __init__ method that helps us define properties of our objects
-        Args:
+          Args:
         account_type:The type of account_type
         user_name:The username for that account .
         password:password for that account.
 
         self variable represents the instance of the object
         """
+        self.account_type = account_type
+        self.user_name = user_name
+        self.password = password
