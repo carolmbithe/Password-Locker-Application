@@ -43,12 +43,58 @@ def display_credentials():
     return Credential.display_credentials()
 
 def main():
-    print("To access the password locker account please input your user name")
-    user_name=input()
-    print("Enter your password")
-    password=input()
-    print("Welcome,Please use these short codes to navigate: ac - add credentials, dc - display credentials, ex - exit the application")
+    # print("To access the password locker account please input your user name")
+    # user_name=input()
+    # print("Enter your password")
+    # password=input()
+    # print("Please re-enter your username and password for validation")
+    #
+    # user_name = input("Please enter your username : ")
+    # password = input("Please enter your password : ")
+    #
+    # if (user_name != "user_name" and password != "password")
+    # print (" Sorry username and password incorrect please re-enter for validation ")
+    # username = input("Please enter your username : ")
+    # password = input("Please enter your password : ")
+# else:
+
+    print("Please enter one of the following codes to proceed, cs - create user if you haven't signed up yet , log -if you already have an account ")
     short_code = input().lower()
+    if short_code == 'cs':
+        print("Create user")
+        print("Username")
+        user_name=input()
+        print("password")
+        password=input()
+
+
+        save_user(create_user(user_name,password))
+        print('\n')
+        print(f"Log in details for {user_name}  have been saved")
+        print('\n')
+
+        print("Please exit the application to log in to see your credentials")
+
+    elif short_code == 'log':
+
+        print("Fill in the required details")
+        user_name=input()
+        print("Enter your password")
+        password=input()
+
+        print("Please re-enter your username and password for validation")
+
+        user_name = input("Please enter your username : ")
+        password = input("Please enter your password : ")
+
+        if (user_name != "user_name" and password != "password")
+        print (" Sorry username and password incorrect please re-enter for validation ")
+        username = input("Please enter your username : ")
+        password = input("Please enter your password : ")
+    else:
+
+        print("Welcome,Please use these short codes to navigate: ac -add credentials, dc -display credentials, ex -exit the application")
+        short_code = input().lower()
     if short_code == 'ac':
         print("Add credentials")
         print("-"*10)
