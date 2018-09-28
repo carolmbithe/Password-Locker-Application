@@ -1,5 +1,8 @@
 import unittest
-from user import User
+from user import User,Credential
+
+
+
 
 class TestUser(unittest.TestCase):
     '''
@@ -44,6 +47,35 @@ class TestUser(unittest.TestCase):
         test_user = User("Mary","1234")
         test_user.save_user()
         self.assertEqual(len(User.user_names),2)
+
+class TestCredential(unittest.TestCase):
+    """
+    Test class that defines test cases for the credential class behavioursself.
+    Args:
+        unittest.TestCase:TestCase class that helps in creating test cases
+    """
+
+    def setUp(self):
+        """
+        Set up method to run before each test casesself.
+        """
+        self.new_credential = Credential("Twitter","carombithe","4321")
+    def test_init(self):
+        """
+        test_init test case to test if the object is initialized properly
+        """
+        self.assertEqual(self.new_credential.account_type,"Twitter")
+        self.assertEqual(self.new_credential.user_name,"carombithe")
+        self.assertEqual(self.new_credential.password,"4321")
+
+
+    def test_save_credential(self):
+        """
+        test save credential test case to test if the contact object is saved into the credential_list
+        """
+        self.new_credential.save_credential()
+        self.assertEqual(len(Credential.credential_list),1)
+        
 
 
 

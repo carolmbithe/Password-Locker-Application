@@ -18,3 +18,29 @@ class User:
         save_user method saves user objects into the user_names
         """
         User.user_names.append(self)
+
+class Credential:
+    """
+    Class that generates new instances of Credential
+    """
+    def __init__(self,account_type,user_name,password):
+        """
+        __init__ method that helps us define properties of our objects
+             Args:
+        account_type:The type of account_type
+        user_name:The username for that account .
+        password:password for that account.
+
+        self variable represents the instance of the object
+        """
+        self.account_type = account_type
+        self.user_name = user_name
+        self.password = password
+
+    credential_list = []
+
+    def save_credential(self):
+        """
+        save_credential method saves credential objects into the credential_list
+        """
+        Credential.credential_list.append(self)
