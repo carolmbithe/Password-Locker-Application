@@ -102,6 +102,14 @@ class TestCredential(unittest.TestCase):
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
 
+    def test_display_all_contacts(self):
+        """
+        method that returns a list of all credentials save_credential
+        """
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+
+
+
 
 
 if __name__ == '__main__':
