@@ -19,6 +19,17 @@ class User:
         """
         User.user_names.append(self)
 
+    @classmethod
+    def user_exist(cls,user_name):
+        """
+        Method that checks if a user exists from the user_names
+        """
+        for user in cls.user_names:
+            if user.user_name == user_name:
+                return True
+
+        return False
+
 class Credential:
     """
     Class that generates new instances of Credential

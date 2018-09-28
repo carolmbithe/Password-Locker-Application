@@ -46,6 +46,17 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
         self.assertEqual(len(User.user_names),2)
 
+    def test_user_exists(self):
+        """
+        test to check if we can return a Boolean if we cannot find the users
+        """
+        self.new_user.save_user()
+        test_user=User("Mary","1234")
+        test_user.save_user()
+
+        user_exists = User.user_exist("Mary")
+        self.assertTrue(user_exists)
+
 class TestCredential(unittest.TestCase):
     """
     Test class that defines test cases for the credential class behavioursself.
@@ -65,7 +76,7 @@ class TestCredential(unittest.TestCase):
         """
 
         Credential.credential_list = []
-        
+
     def test_init(self):
         """
         test_init test case to test if the object is initialized properly
