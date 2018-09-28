@@ -2,8 +2,6 @@ import unittest
 from user import User,Credential
 
 
-
-
 class TestUser(unittest.TestCase):
     '''
     Test class that defines test cases for the user class behaviours.
@@ -60,6 +58,14 @@ class TestCredential(unittest.TestCase):
         Set up method to run before each test casesself.
         """
         self.new_credential = Credential("Twitter","carombithe","4321")
+
+    def tearDown(self):
+        """
+        tearDown method that does clean up after each test case has runself.
+        """
+
+        Credential.credential_list = []
+        
     def test_init(self):
         """
         test_init test case to test if the object is initialized properly
@@ -75,7 +81,15 @@ class TestCredential(unittest.TestCase):
         """
         self.new_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),1)
-        
+
+    def test_save_multiple_credentials(self):
+        """
+        test_save_multiple_credentials to check if it can save multiple credentials objects to our credential_list
+        """
+        self.new_credential.save_credential()
+        test_credential=Credential("Facebook","mumocarol","09876")
+        test_credential.save_credential()
+        self.assertEqual(len(Credential.credential_list),2)
 
 
 
