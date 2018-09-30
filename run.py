@@ -92,7 +92,7 @@ def main():
             print("Password")
             password=(input)
 
-            save_credentials(add_credential(account_type,user_name,password))
+            # save_credentials(add_credential(account_type,user_name,password))
             print('\n')
             print(f"Credentials for {account_type} added")
             print('\n')
