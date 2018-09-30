@@ -3,12 +3,12 @@ from user import User
 from credential import Credential
 import random
 
-def create_user(user_name,password):
-    """
-    Function to create a new users
-    """
-    new_user= User(user_name,password)
-    return new_user
+# def create_user(user_name,password):
+#     """
+#     Function to create a new users
+#     """
+#     new_user= User(user_name,password)
+#     return new_user
 
 def save_user(user):
     """
@@ -92,7 +92,7 @@ def main():
             print("Password")
             password=(input)
 
-            # save_credentials(add_credential(account_type,user_name,password))
+            save_credentials(add_credential(account_type,user_name,password))
             print('\n')
             print(f"Credentials for {account_type} added")
             print('\n')
