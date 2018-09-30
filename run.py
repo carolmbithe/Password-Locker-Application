@@ -38,15 +38,15 @@ def save_credentials(credential):
 
 def display_credentials():
     """
-    Function that returns all the saved contacts
+    Function that returns all the saved credentials
     """
     return Credential.display_credentials()
 
 def main():
     print("Welcome!")
-    while True:
 
-        print("Please enter one of the following codes to proceed, cs - create user if you haven't signed up yet , log -if you already have an account and ex to exit the application ")
+
+    print("Please enter one of the following codes to proceed, cs - create user if you haven't signed up yet , log -if you already have an account and ex to exit the application ")
     short_code = input().lower()
 
     if short_code == 'cs':
@@ -74,53 +74,48 @@ def main():
 
     else:
         print("User does not exist please create an account first")
+    while True:
+
+        print("Welcome")
 
 
-
-
-    #     print("Please re-enter your username and password for validation")
-    #
-    #     user_name = input("Please enter your username : ")
-    #     password = input("Please enter your password : ")
-    #
-    #     if (user_name != "user_name" and password != "password"
-    #     print (" Sorry username and password incorrect please re-enter for validation ")
-    #     username = input("Please enter your username : ")
-    #     password = input("Please enter your password : ")
-    # else:
-
-        print("Welcome,Please use these short codes to navigate: ac -add credentials, dc -display credentials, ex -exit the application")
+        print("Please use these short codes to navigate: ac -add credentials, dc -display credentials, ex -exit the application")
         short_code = input().lower()
-    if short_code == 'ac':
-        print("Add credentials")
-        print("-"*10)
-        print("Account type...")
-        account_type=input()
-        print("User name")
-        user_name=input()
-        print("Password")
-        password=input()
+        if short_code == 'ac':
+            print("Add credentials")
+            print("-"*10)
+            print("Account type...")
+            account_type=input()
+            print("User name")
+            user_name=input()
+            print("Password")
+            password=input()
 
-        save_credentials(add_credential(account_type,user_name,password))
-        print('\n')
-        print(f"Credentials for {account_type} added")
-        print('\n')
-    elif short_code == 'dc':
-        if display_credentials():
-            print("Here is a list of your credentials")
+            save_credentials(add_credential(account_type,user_name,password))
             print('\n')
+            print(f"Credentials for {account_type} added")
+            print('\n')
+        elif short_code == 'dc':
+            if display_credentials():
+                print("Here is a list of your credentials")
+                print('\n')
 
-            for contact in display_credentials():
-                print(f"{credential.account_type}..{credential.user_name} ..{credential.password}")
-                print('\n')
+                for credential in display_credentials():
+                    print(f"{credential.account_type}..{credential.user_name} ..{credential.password}")
+                    print('\n')
             else:
-                print('\n')
-                print("You don't have credentials saved yet")
+                    print('\n')
+                    print("You don't have credentials saved yet")
             # elif short_code =='fc':
 
-        elif short_code == 'ex':
-            print("Exiting the password locker")
-            break
+        # elif short_code == 'ex':
+                    print("Exiting the password locker")
+                    break
+
+            # else:
+            #
+            #         print("Please use a valid code")
+
         # else:
         #     print("Please use the short codes provided")
 
