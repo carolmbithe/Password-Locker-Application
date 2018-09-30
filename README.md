@@ -1,9 +1,10 @@
 ## PASSWORD LOCKER
+Python 3.6 Application
 
-## Caroline Mumo
+## By Caroline Mumo
 
 ## Description of the application
-This application is intended to help
+This application is aimed to help a user store passwords of different accounts in one password protected account
 
 ## Project setup instructions
 You can install this app by cloning the repository from this link https://github.com/carolmbithe/Password-Locker-Application.git
@@ -12,9 +13,14 @@ You can install this app by cloning the repository from this link https://github
 There are no known bugs so far,everything is working.
 
 ## Behaviour Driven Development
-The navigation has links on About and Github
-On clicking About,it takes to a page that has details about the application
-When you choose github,it takes you to a page where you can search for users on github
+The user navigates using given short codes
+cs-The user creates an account user by inputting his/her username and password
+log-The user logs in the already created account
+ac-This is for adding credentials where a user inputs the account type eg twitter,username for the account and the password for the account
+dc-This is for displaying Credentials
+ex-This exits the user from the password locker application
+
+
 
 ## Technologies Used
 This project was generated with Python3.6
