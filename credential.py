@@ -22,7 +22,7 @@ class Credential:
         """
         A method to generate a credential generate_password
         """
-        s = "abcdefghijklrmn012347899"
+        s = "abcdefghijklmnopqrstuvwxyz0123456789"
         gen_pass=''.join(random.choice(s) for _ in range(8))
         return gen_pass
 

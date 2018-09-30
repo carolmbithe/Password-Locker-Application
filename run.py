@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.6
 from user import User
 from credential import Credential
+import random
 
 def create_user(user_name,password):
     """
@@ -50,7 +51,7 @@ def main():
     short_code = input().lower()
 
     if short_code == 'cs':
-        print("Create user")
+        print("Careate user")
         print("Username")
         user_name=input()
         print("password")
@@ -89,7 +90,7 @@ def main():
             print("User name")
             user_name=input()
             print("Password")
-            password=input()
+            password=(input)
 
             save_credentials(add_credential(account_type,user_name,password))
             print('\n')
@@ -106,18 +107,15 @@ def main():
             else:
                     print('\n')
                     print("You don't have credentials saved yet")
-            # elif short_code =='fc':
 
-        # elif short_code == 'ex':
-                    print("Exiting the password locker")
-                    break
 
-            # else:
-            #
-            #         print("Please use a valid code")
+        elif short_code == 'ex':
+                print("Exiting the password locker")
+                break
 
-        # else:
-        #     print("Please use the short codes provided")
+        else:
+
+                print("Please use a valid code")
 
 
 

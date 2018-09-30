@@ -17,7 +17,7 @@ class TestCredential(unittest.TestCase):
 
     def tearDown(self):
         """
-        tearDown method that does clean up after each test case has runself.
+        tearDown method that does clean up after each test case has run.
         """
 
         Credential.credential_list = []
@@ -28,13 +28,13 @@ class TestCredential(unittest.TestCase):
         """
         self.assertEqual(self.new_credential.account_type,"Twitter")
         self.assertEqual(self.new_credential.user_name,"carombithe")
-        self.assertEqual(self.new_credential.password,"4321")
+        self.assertEqual(self.new_credential.generate_password,"4321")
 
     def test_generate_password(self):
         """
         method that generates a password
         """
-        self.assertEqual(Credential.generate_password(),Credential.generate_password)
+        self.assertEqual(Credential.password(),Credential.password)
 
 
     def test_save_credential(self):
