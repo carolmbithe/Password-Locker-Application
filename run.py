@@ -92,6 +92,22 @@ def main():
             print("Password")
             password=(input)
 
+            # print("You can choose to create your password or generate it ,if generate input g if create type c")
+            # code=input()
+            #
+            # if code =="c":
+            #     print("Enter your Password")
+            #     password=input()
+            #
+            #     # print(f"Password: {Credential.password}"
+            #
+            # elif code =="g":
+            #     s="abcdefghijklmnopqrstuvwxyz0123456789"
+            #     password=''.join(random.choice(s) for _ in range(7))
+
+            # else:
+            #     print("Put a valid code")
+
             save_credentials(add_credential(account_type,user_name,password))
             print('\n')
             print(f"Credentials for {account_type} added")

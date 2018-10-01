@@ -13,17 +13,17 @@ You can install this app by cloning the repository from this link https://github
 There are no known bugs so far,everything is working.
 
 ## Behaviour Driven Development
-The user navigates using given short codes
+The user navigates using given short codes <br  />
 
-cs-The user creates an account user by inputting his/her username and password
+cs-The user creates an account user by inputting his/her username and password <br  />
 
-log-The user logs in the already created account
+log-The user logs in the already created account <br  />
 
-ac-This is for adding credentials where a user inputs the account type eg twitter,username for the account and the password for the account
+ac-This is for adding credentials where a user inputs the account type eg twitter,username for the account and the password for the account <br  />
 
-dc-This is for displaying Credentials
+dc-This is for displaying Credentials <br  />
 
-ex-This exits the user from the password locker application
+ex-This exits the user from the password locker application <br  />
 
 
 
