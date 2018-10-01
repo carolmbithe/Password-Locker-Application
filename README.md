@@ -14,10 +14,15 @@ There are no known bugs so far,everything is working.
 
 ## Behaviour Driven Development
 The user navigates using given short codes
+
 cs-The user creates an account user by inputting his/her username and password
+
 log-The user logs in the already created account
+
 ac-This is for adding credentials where a user inputs the account type eg twitter,username for the account and the password for the account
+
 dc-This is for displaying Credentials
+
 ex-This exits the user from the password locker application
 
 
