@@ -87,30 +87,30 @@ def main():
             print("-"*10)
             print("Account type...")
             account_type=input()
-            print("User name")
+            print("User name..")
             user_name=input()
-            print("Password")
-            password=(input)
+            # print("Password,,")
+            # password=input()
 
-            # print("You can choose to create your password or generate it ,if generate input g if create type c")
-            # code=input()
-            #
-            # if code =="c":
-            #     print("Enter your Password")
-            #     password=input()
-            #
-            #     # print(f"Password: {Credential.password}"
-            #
-            # elif code =="g":
-            #     s="abcdefghijklmnopqrstuvwxyz0123456789"
-            #     password=''.join(random.choice(s) for _ in range(7))
+            print("You can choose to create your password or generate it ,if generate type g if create type c")
+            code=input().lower()
 
-            # else:
-            #     print("Put a valid code")
+            if code == 'c':
+                print("Enter your Password")
+                password=input()
+
+                # print(f"Password: {Credential.password}"
+
+            elif code =='g':
+                s="abcdefghijklmnopqrstuvwxyz0123456789"
+                password=''.join(random.choice(s) for _ in range(8))
+
+            else:
+                print("Put a valid code")
 
             save_credentials(add_credential(account_type,user_name,password))
             print('\n')
-            print(f"Credentials for {account_type} added")
+            print(f"Credentials Account {account_type} account's username {user_name} with password {password} added")
             print('\n')
         elif short_code == 'dc':
             if display_credentials():
